@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../layout.css";
+import "../Layout.css";
 
 function Layout({ children }) {
   return (
