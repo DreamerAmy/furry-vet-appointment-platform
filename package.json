@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/DreamerAmy/furry-vet-appointment-platform#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
