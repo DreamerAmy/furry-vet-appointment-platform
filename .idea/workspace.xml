@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="0940dedb-6702-42ee-8026-535391fd6eee" name="Changes" comment="" />
+=======
+    <list default="true" id="0940dedb-6702-42ee-8026-535391fd6eee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +43,10 @@
       <updated>1666663554895</updated>
       <workItem from="1666663558177" duration="23000" />
       <workItem from="1666663603167" duration="520000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1666810403051" duration="634000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
