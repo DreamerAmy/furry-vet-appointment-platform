@@ -44,3 +44,16 @@
     font-size: 18px;
     padding: 0 10px;
 }
+.menu-item i{
+    color: rgba(255, 255, 255, 0.716);
+    text-decoration: none;
+    font-size: 18px;
+    margin:0 15px;
+}
+
+.active-menu-item{
+    color: white;
+    background-color: #013737;
+    padding: 5px;
+    border-radius: 5px;
+}

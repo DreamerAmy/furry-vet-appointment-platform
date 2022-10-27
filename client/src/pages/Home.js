@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <Layout>
-      <h1>Homepage</h1>
+      <h1>这玩意是主页</h1>
     </Layout>
   );
 }

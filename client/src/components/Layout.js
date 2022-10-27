@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, } from "react-router-dom";
 import '../layout.css'
 function Layout({ children }) {
-
+  const location = useLocation();
   const userMenu = [
     {
       name: "Home",
@@ -12,7 +12,7 @@ function Layout({ children }) {
     {
       name: "Appointments",
       path: "/appointments",
-      icon: "ri-file-list-line",
+      icon: "ri-file-copy-2-line",
     },
     {
       name: "Apply Doctor",
@@ -26,23 +26,28 @@ function Layout({ children }) {
       <div className="d-flex layout">
         <div className="sidebar">
           <div className="sidebar-header">
-            <h1>SH</h1>
+            <h1>喵喵</h1>
           </div>
 
           <div className="menu">
             {menuToBeRendered.map((menu) => {
-
-              return <div className="d-flex menu-item">
-                <i className={menu.icon}></i>
+              const isActive = location.pathname === menu.path;
+              return (<div
+              className={`d-flex menu-item ${
+                isActive && "active-menu-item"
+              }`}
+            >
+                <i className ={menu.icon}></i>
                 <Link to={menu.path}>{menu.name}</Link>
               </div>
+              );
             })}
           </div>
         </div>
 
         <div className="content">
           <div className="header">
-            header
+            不知道写啥的标题
           </div>
 
           <div className="body">
