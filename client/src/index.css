@@ -39,7 +39,11 @@ label{
   height: 5rem;
   color: white !important;
 }
-
+.page-title{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.833);
+  font-weight: bold;
+}
 .card-title{
   font-size: 1.5rem;
   font-weight: bold;

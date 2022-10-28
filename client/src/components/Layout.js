@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../layout.css";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
   const { user } = useSelector((state) => state.user);
+  const navigate = useNavigate();
   const location = useLocation();
   const userMenu = [
     {
@@ -29,13 +30,36 @@ function Layout({ children }) {
       icon: "ri-user-line",
     },
   ];
-  const menuToBeRendered = userMenu;
+  const adminMenu = [
+    {
+      name: "Home",
+      path: "/",
+      icon: "ri-home-line",
+    },
+    {
+      name: "Users",
+      path: "/admin/userslist",
+      icon: "ri-user-line",
+    },
+    {
+      name: "Doctors",
+      path: "/admin/doctorslist",
+      icon: "ri-user-star-line",
+    },
+    {
+      name: "Profile",
+      path: "/profile",
+      icon: "ri-user-line",
+    },
+  ];
+
+  const menuToBeRendered = user?.isAdmin ? adminMenu :userMenu;
   return (
     <div className="main">
       <div className="d-flex layout">
         <div className='sidebar'>
           <div className="sidebar-header">
-            <h1>喵喵</h1>
+            <h1 className="logo">没想好叫啥就先空着了</h1>
           </div>
 
           <div className="menu">
@@ -51,6 +75,15 @@ function Layout({ children }) {
               </div>
               );
             })}
+            <div
+              className={`d-flex menu-item `}
+              onClick={() => {
+                localStorage.clear();
+                navigate("/login");
+              }}>
+                <i className="ri-logout-circle-line"></i>
+                {!collapsed && <Link to="/login">Logout</Link>}
+              </div>
           </div>
         </div>
 
