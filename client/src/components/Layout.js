@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../layout.css";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import { Badge } from "antd";
 function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
   const { user } = useSelector((state) => state.user);
@@ -101,8 +101,16 @@ function Layout({ children }) {
               ></i>
             )}
             <div className="d-flex align-items-center px-4">
-               <i className="ri-notification-line header-action-icon px-3"></i>
-               <Link className="anchor" to="/profile">{user?.name}</Link>
+              <Badge
+                count={user?.unseenNotifications.length}
+                
+              >
+                <i className="ri-notification-line header-action-icon px-3"></i>
+              </Badge>
+
+              <Link className="anchor mx-2" to="/profile">
+                {user?.name}
+              </Link>
             </div>
           </div>
 

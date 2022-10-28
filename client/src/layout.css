@@ -70,7 +70,10 @@
     cursor: pointer;
     padding-left: 10px;
 }
-
+.ant-badge-count{
+    padding-right: -10px !important;
+    padding-bottom: -10px !important;
+}
 @media screen and (max-width: 768px){
   
     .menu{
