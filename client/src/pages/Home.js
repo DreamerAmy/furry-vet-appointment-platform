@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import axios from "axios";
+import Layout from "../components/Layout";
 function Home() {
   const getData = async () => {
     try {
@@ -13,9 +14,9 @@ function Home() {
           },
         }
       );
-      console.log(response.data);
+
     } catch (error) {
-      console.log(error);
+
     }
   };
 
@@ -23,7 +24,11 @@ function Home() {
     getData();
   }, []);
 
-  return <div>Home</div>;
+  return (
+    <Layout>
+      <h1>这玩意是主页</h1>
+    </Layout>
+  );
 }
 
 export default Home;

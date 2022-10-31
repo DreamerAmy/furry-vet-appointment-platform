@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
       if (err) {
         return res.status(401).send({
           message: "Auth failed",
-          success: fasle,
+          success: false,
         });
       } else {
         req.body.userId = decoded.id;
@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
   } catch (error) {
     return res.status(401).send({
       message: "Auth failed",
-      success: fasle,
+      success: false,
     });
   }
 };
