@@ -7,7 +7,7 @@ import axios from "axios";
 import { Table } from "antd";
 import moment from "moment";
 
-function DoctorsLis() {
+function DoctorsList() {
     const [doctors, setDoctors] = useState([]);
     const dispatch = useDispatch();
     const getDoctorsData = async () => {
