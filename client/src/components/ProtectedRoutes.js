@@ -7,7 +7,7 @@ import { setUser } from "../redux/userSlice";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 
 function ProtectedRoute(props) {
-  const { user, reloadUser } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const getUser = async () => {
