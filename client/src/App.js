@@ -37,7 +37,7 @@ function App() {
             </PublicRoute>
           }
         />
-        
+
         <Route
           path="/"
           element={
@@ -48,6 +48,14 @@ function App() {
         />
         <Route
           path="/apply-doctor"
+          element={
+            <ProtectedRoute>
+              <ApplyDoctor />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/notifications"
           element={
             <ProtectedRoute>
               <ApplyDoctor />
