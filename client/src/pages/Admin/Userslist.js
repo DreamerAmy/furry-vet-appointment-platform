@@ -1,30 +1,34 @@
-import Layout from "../../components/Layout";
 import React, { useEffect, useState } from "react";
-import { showLoading } from "../../redux/alertsSlice";
-import { showLoading, hideLoading } from '../../redux/alertsSlice'
+import { useDispatch } from "react-redux";
+import Layout from "../../components/Layout";
+import { showLoading, hideLoading } from "../../redux/alertsSlice";
 import axios from "axios";
+import { Table } from "antd";
+import moment from "moment";
+
 function Userslist() {
-    const [users, setUsers] = useState([])
-    const dispatch = useDispatch()
+    const [users, setUsers] = useState([]);
+    const dispatch = useDispatch();
     const getUsersData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("/api/admin/get-all-users", {
+            const resposne = await axios.get("/api/admin/get-all-users", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
             });
             dispatch(hideLoading());
-            if (response.data.success) {
-                setUsers(response.data.data);
+            if (resposne.data.success) {
+                setUsers(resposne.data.data);
             }
         } catch (error) {
-
+            dispatch(hideLoading());
         }
-    }
+    };
+
     useEffect(() => {
-        getUsersData()
-    }, [])
+        getUsersData();
+    }, []);
 
     const columns = [
         {
@@ -60,4 +64,4 @@ function Userslist() {
     );
 }
 
-export default Userslist
+export default Userslist;
