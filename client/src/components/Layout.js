@@ -43,7 +43,7 @@ function Layout({ children }) {
     },
     {
       name: "Doctors",
-      path: "/admin/doctorslist",
+      path: "/doctors",
       icon: "ri-user-star-line",
     },
     {
