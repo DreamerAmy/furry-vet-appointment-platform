@@ -16,7 +16,6 @@ function Login() {
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);
-        toast("Redirecting to home page");
         localStorage.setItem("token", response.data.data);
         navigate("/");
       } else {
@@ -24,7 +23,7 @@ function Login() {
       }
     } catch (error) {
       dispatch(hideLoading());
-      toast.error("something went wrong");
+      toast.error("something went wrong for login");
     }
   };
   return (
@@ -38,9 +37,14 @@ function Login() {
           <Form.Item label="Password" name="password">
             <Input placeholder="Password" type="password" />
           </Form.Item>
-          <Button className="primary-button my-2" htmlType="submit">
+
+          <Button
+            className="primary-button my-2 full-width-button"
+            htmlType="submit"
+          >
             LOGIN
           </Button>
+
           <Link to="/register" className="anchor mt-2">
             CLICK HERE TO REGISTER
           </Link>
