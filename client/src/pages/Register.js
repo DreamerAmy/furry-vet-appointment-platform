@@ -23,7 +23,7 @@ function Register() {
       }
     } catch (error) {
       dispatch(hideLoading());
-      toast.error("something went wrong");
+      toast.error("something went wrong for registration");
     }
   };
   return (

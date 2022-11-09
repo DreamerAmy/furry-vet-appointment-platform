@@ -29,7 +29,7 @@ function Notifications() {
             }
         } catch (error) {
             dispatch(hideLoading());
-            toast.error("Something went wrong");
+            toast.error("Something went wrong in mark all as seen");
         }
     }
 
@@ -50,7 +50,7 @@ function Notifications() {
             }
         } catch (error) {
             dispatch(hideLoading());
-            toast.error("Something went wrong");
+            toast.error("Something went wrong on delete all");
         }
     }
     return (
