@@ -16,7 +16,6 @@ function Register() {
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);
-        toast("Redirecting to login page");
         navigate("/login");
       } else {
         toast.error(response.data.message);
@@ -40,7 +39,10 @@ function Register() {
           <Form.Item label="Password" name="password">
             <Input placeholder="Password" type="password" />
           </Form.Item>
-          <Button className="primary-button my-2 full-width-button" htmlType="submit">
+          <Button
+            className="primary-button my-2 full-width-button"
+            htmlType="submit"
+          >
             REGISTER
           </Button>
           <Link to="/login" className="anchor mt-2">

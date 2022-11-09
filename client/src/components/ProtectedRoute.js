@@ -12,7 +12,7 @@ function ProtectedRoute(props) {
   const navigate = useNavigate();
   const getUser = async () => {
     try {
-      dispatch(showLoading())
+      dispatch(showLoading());
       const response = await axios.post(
         "/api/user/get-user-info-by-id",
         { token: localStorage.getItem("token") },
@@ -26,12 +26,12 @@ function ProtectedRoute(props) {
       if (response.data.success) {
         dispatch(setUser(response.data.data));
       } else {
-        localStorage.clear()
+        localStorage.clear();
         navigate("/login");
       }
     } catch (error) {
       dispatch(hideLoading());
-      localStorage.clear()
+      localStorage.clear();
       navigate("/login");
     }
   };

@@ -1,4 +1,3 @@
-import { Button, Col, Form, Input, Row, TimePicker } from "antd";
 import React from "react";
 import Layout from "../components/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,6 +5,8 @@ import { showLoading, hideLoading } from "../redux/alertsSlice";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import DoctorForm from "../components/DoctorForm";
+import moment from "moment";
 
 function ApplyDoctor() {
   const dispatch = useDispatch();
@@ -19,6 +20,10 @@ function ApplyDoctor() {
         {
           ...values,
           userId: user._id,
+          timings: [
+            moment(values.timings[0]).format("HH:mm"),
+            moment(values.timings[1]).format("HH:mm"),
+          ],
         },
         {
           headers: {
@@ -42,71 +47,9 @@ function ApplyDoctor() {
   return (
     <Layout>
       <h1 className="page-title">Apply Doctor</h1>
-      <hr/>
-      <Form layout="vertical" onFinish={onFinish}>
-        <h1 className="card-title mt-3">Personal Information</h1>
-        <Row gutter={20}>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="First Name" name = "firstName" rule ={[{required: true}]}>
-              <Input placeholder="First Name" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Last Name" name = "lastName" rule ={[{required: true}]}>
-              <Input placeholder="Last Name" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Phone Number" name = "phoneNumber" rule ={[{required: true}]}>
-              <Input placeholder="Phone Number" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Website" name = "website" rule ={[{required: true}]}>
-              <Input placeholder="Website" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Address" name = "address" rule ={[{required: true}]}>
-              <Input placeholder="Address" />
-            </Form.Item>
-          </Col>
+      <hr />
 
-        </Row>
-      </Form>
-
-      <hr/>
-      <Form layout="vertical" >
-        <h1 className="card-title mt-3">Professional Information</h1>
-        <Row gutter={20}>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Specialization" name = "specialization" rule ={[{required: true}]}>
-              <Input placeholder="Specialization" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Experience" name = "experience" rule ={[{required: true}]}>
-              <Input placeholder="Experience" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Fee Per Cunsultation" name = "feePerCunsultation" rule ={[{required: true}]}>
-              <Input placeholder="Fee Per Cunsultation" />
-            </Form.Item>
-          </Col>
-          <Col span={8} xs={24} sm={24} lg={8}>
-            <Form.Item required label="Timing" name = "timings" rule ={[{required: true}]}>
-              <TimePicker.RangePicker/>
-            </Form.Item>
-          </Col>
-        </Row>
-        <div className="d-flex justify-content-end">
-          <Button className="primary-button" htmlType="submit">
-            SUBMIT
-          </Button>
-        </div>
-      </Form>
-
+      <DoctorForm onFinish={onFinish} />
     </Layout>
   );
 }
