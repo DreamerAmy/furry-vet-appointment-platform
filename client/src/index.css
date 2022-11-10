@@ -94,6 +94,10 @@ p{
   text-decoration: underline !important;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .authentication{
   height: 100vh;
   display: flex;
