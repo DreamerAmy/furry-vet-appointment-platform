@@ -2,17 +2,17 @@ import { Button, Col, Form, Input, Row, TimePicker } from "antd";
 import React from "react";
 import moment from "moment";
 
-function DoctorForm({ onFinish, initivalValues }) {
+function DoctorForm({ onFinish, initialValues }) {
   return (
     <Form
       layout="vertical"
       onFinish={onFinish}
       initialValues={{
-        ...initivalValues,
-        ...(initivalValues && {
+        ...initialValues,
+        ...(initialValues && {
           timings: [
-            moment(initivalValues?.timings[0], "HH:mm"),
-            moment(initivalValues?.timings[1], "HH:mm"),
+            moment(initialValues?.timings[0], "HH:mm"),
+            moment(initialValues?.timings[1], "HH:mm"),
           ],
         }),
       }}

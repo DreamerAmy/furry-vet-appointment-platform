@@ -43,7 +43,7 @@ function Profile() {
       }
     } catch (error) {
       dispatch(hideLoading());
-      toast.error("Something went wrong");
+      toast.error("Something went wrong on update doctor profile");
     }
   };
   const getDoctorData = async () => {

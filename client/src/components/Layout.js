@@ -23,12 +23,7 @@ function Layout({ children }) {
       name: "Apply Doctor",
       path: "/apply-doctor",
       icon: "ri-hospital-line",
-    },
-    {
-      name: "Profile",
-      path: "/profile",
-      icon: "ri-user-line",
-    },
+    }
   ];
   const doctorMenu = [
     {
@@ -70,18 +65,14 @@ function Layout({ children }) {
     },
   ];
 
-  const menuToBeRendered = user?.isAdmin
-    ? adminMenu
-    : user?.isDoctor
-    ? doctorMenu
-    : userMenu;
+  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
   const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
   return (
     <div className="main">
       <div className="d-flex layout">
         <div className="sidebar">
           <div className="sidebar-header">
-            <h1 className="logo">没想好叫啥就先空着了</h1>
+            <h1 className="logo">Furry Vet Appointment Platform</h1>
             <h1 className="role">{role}</h1>
           </div>
 
