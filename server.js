@@ -5,11 +5,6 @@ const dbConfig = require("./config/dbConfig");
 app.use(express.json());
 const userRoute = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
-<<<<<<< Updated upstream
-
-app.use("/api/user", userRoute);
-app.use('/api/admin', adminRoute);
-=======
 const doctorRoute = require("./routes/doctorsRoute");
 const path = require("path");
 
@@ -24,7 +19,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client/build/index.html"));
   });
 }
->>>>>>> Stashed changes
 const port = process.env.PORT || 3000;
 
 // console.log(process.env.MONGO_URL)
