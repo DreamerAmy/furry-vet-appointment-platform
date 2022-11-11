@@ -113,9 +113,9 @@ function BookAppointment() {
                             <h1 className="normal-text"><b>Working Hour: {doctor.timings[0]} - {doctor.timings[1]}</b></h1>
                             <div className="d-flex flex-column pt-2">
                                 <DatePicker
-                                    format={'DD-MM-YYYY'}
+                                    format={'MM-DD-YYYY'}
                                     onChange={(v)=>{
-                                        setDate(moment(v).format('DD-MM-YYYY'));
+                                        setDate(moment(v).format('MM-DD-YYYY'));
                                         setIsAvailable(false);
                                     }}/>
                                 <TimePicker format='HH:mm' className="mt-3" onChange={(values)=>{
@@ -126,7 +126,7 @@ function BookAppointment() {
                                 }}/>
                                 {!isAvailable &&
                                     <Button className="primary-button mt-2 full-width-button"
-                                            onClick={checkAvailability}>check Availability</Button>
+                                            onClick={checkAvailability}>Check Availability</Button>
                                 }
                                 {isAvailable &&
                                     <Button className="primary-button mt-2 full-width-button"

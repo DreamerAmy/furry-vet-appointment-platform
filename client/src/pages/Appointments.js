@@ -28,11 +28,11 @@ function Appointments() {
     };
     const columns = [
         {
-            title: "Id",
+            title: "Booking ID",
             dataIndex: "_id",
         },
         {
-            title: "Doctor",
+            title: "Vet",
             dataIndex: "name",
             render: (text, record) => (
                 <span>
@@ -54,7 +54,7 @@ function Appointments() {
             dataIndex: "createdAt",
             render: (text, record) => (
                 <span>
-          {moment(record.date).format("DD-MM-YYYY")} {moment(record.time).format("HH:mm")}
+          {moment(record.date).format("MM-DD-YYYY")} {moment(record.time).format("HH:mm")}
         </span>
             ),
         },

@@ -20,7 +20,7 @@ function Layout({ children }) {
       icon: "ri-file-copy-2-line",
     },
     {
-      name: "Apply Doctor",
+      name: "Apply Vet",
       path: "/apply-doctor",
       icon: "ri-hospital-line",
     }
@@ -54,7 +54,7 @@ function Layout({ children }) {
       icon: "ri-user-line",
     },
     {
-      name: "Doctors",
+      name: "Vets",
       path: "/admin/doctorslist",
       icon: "ri-user-star-line",
     },
@@ -72,7 +72,9 @@ function Layout({ children }) {
       <div className="d-flex layout">
         <div className="sidebar">
           <div className="sidebar-header">
-            <h1 className="logo">Furry Vet Appointment Platform</h1>
+
+            <h1 className="logo">Furry Vet</h1>
+            <img src="../../public/FVLogo.png" width={50}/>
             <h1 className="role">{role}</h1>
           </div>
 
