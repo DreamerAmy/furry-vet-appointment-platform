@@ -4,14 +4,18 @@
 .logo{
     color: white;
     font-weight: bold;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: small;
 }
 .role{
-    color:white;
-    font-size: 14px;
-    margin-top: -20px;  
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 20px;
+    color: lightpink;
 }
 .sidebar{
-    background-color: #005555;
+    background-color: cadetblue;
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
     margin-right: 20px;

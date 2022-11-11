@@ -55,7 +55,7 @@ label{
 .card-title{
   font-size: 22px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.627);
+  color: cadetblue;
 }
 .normal-text{
   font-size: 1rem;
@@ -66,8 +66,8 @@ label{
   border-radius: 0 !important;
 }
 .primary-button{
-  background-color: #005555 !important;
-  border-color: #005555 !important;
+  background-color: lightsteelblue !important;
+  border-color: lightsteelblue !important;
   height: 40px !important;
   width: 100% !important;
   color: white !important;
@@ -103,7 +103,7 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #005555;
+  background-color: lightsteelblue;
 }
 
 .authentication-form{
@@ -113,10 +113,12 @@ p{
 .authentication .card-title{
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: orangered;
+  background-color: cadetblue;
   color: white !important;
   max-width: max-content !important;
   padding: 7px 15px;
   margin-left: -40px;
   border-bottom-left-radius: 10px;  
 }
+
+

@@ -24,6 +24,7 @@ function Login() {
     } catch (error) {
       dispatch(hideLoading());
       toast.error("something went wrong for login");
+      console.log(error)
     }
   };
   return (

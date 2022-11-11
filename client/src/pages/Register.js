@@ -23,12 +23,13 @@ function Register() {
     } catch (error) {
       dispatch(hideLoading());
       toast.error("something went wrong for registration");
+      console.log(error)
     }
   };
   return (
     <div className="authentication">
       <div className="authentication-form card p-3">
-        <h1 className="card-title">Nice To Meet U</h1>
+        <h1 className="card-title">Furry Vet Appointment Platform</h1>
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item label="Name" name="name">
             <Input placeholder="Name" />

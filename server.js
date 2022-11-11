@@ -19,10 +19,8 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client/build/index.html"));
   });
 }
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // console.log(process.env.MONGO_URL)
 app.get("/", (req, res) => res.send("Hello World!"));
-app.listen(port, () => {
-  console.log(`Node server started at port ${port}`);
-});
+app.listen(port, () => {console.log(`Node server started at port ${port}`);});
