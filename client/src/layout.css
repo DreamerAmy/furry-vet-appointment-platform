@@ -1,17 +1,18 @@
 .main{
     padding: 20px;
 }
-.logo{
-    color: white;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-left: 20px;
-    font-size: small;
+.logo-img{
+    border-radius: 25px;
+}
+.logo {
+    margin-top: 30px;
+    margin-left: 20px;
 }
 .role{
+    font-weight: bold;
     font-size: 20px;
-    padding-top: 40px;
-    padding-left: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
     color: lightpink;
 }
 .sidebar{
@@ -39,6 +40,8 @@
 
 .body{
     background-color: white;
+    background-image: url("./image/animals.jpg");
+
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
     height: 82vh;

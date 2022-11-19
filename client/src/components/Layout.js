@@ -73,8 +73,8 @@ function Layout({ children }) {
         <div className="sidebar">
           <div className="sidebar-header">
 
-            <h1 className="logo">Furry Vet</h1>
-            <img src="../../public/FVLogo.png" width={50}/>
+            {/*<h1 className="logo">Furry Vet</h1>*/}
+            <img className="logo-img logo" src={require("../image/FVLogo.png")} width={100} alt="logo"/>
             <h1 className="role">{role}</h1>
           </div>
 

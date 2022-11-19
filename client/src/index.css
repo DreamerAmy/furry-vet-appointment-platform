@@ -103,7 +103,8 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightsteelblue;
+  /*background-color: lightsteelblue;*/
+  background-image: url("./image/FVLogo.png");
 }
 
 .authentication-form{
