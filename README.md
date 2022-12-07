@@ -9,7 +9,7 @@ furry-vet-appointment-platform % npx nodemon server
 
 You will see the following:
 
-Node server started at port 3000
+Node server started at port 3001
 
 MongoDB connection is successful
 
