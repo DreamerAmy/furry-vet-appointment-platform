@@ -33,7 +33,7 @@ function DoctorAppointments() {
     const changeAppointmentStatus = async (record, status) => {
         try {
             dispatch(showLoading());
-            const resposne = await axios.post(
+            const response = await axios.post(
                 "/api/doctor/change-appointment-status",
                 { appointmentId : record._id, status: status },
                 {
@@ -43,8 +43,8 @@ function DoctorAppointments() {
                 }
             );
             dispatch(hideLoading());
-            if (resposne.data.success) {
-                toast.success(resposne.data.message);
+            if (response.data.success) {
+                toast.success(response.data.message);
                 getAppointmentsData();
             }
         } catch (error) {

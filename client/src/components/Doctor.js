@@ -9,10 +9,11 @@ function Doctor({doctor}) {
         <h1 className="card-title">
             {doctor.firstName} {doctor.lastName}
         </h1>
-        <p className='card-text'><b>Address: </b>{doctor.phoneNumber}</p>
-        <p className='card-text'><b>Phone Number: </b>{doctor.address}</p>
-        <p className='card-text'><b>Fee per Visit: </b>{doctor.feePerConsultation}</p>
+        <p className='card-text'><b>Address: </b>{doctor.address}</p>
+        <p className='card-text'><b>Phone Number: </b>{doctor.phoneNumber}</p>
+        <p className='card-text'><b>Fee per Visit: </b>${doctor.feePerConsultation}</p>
         <p className='card-text'><b>Working Hour: </b>{doctor.timings[0]} - {doctor.timings[1]}</p>
+        <p className='card-text'><b>Specialization: </b>{doctor.specialization}</p>
     </div>
   )
 }

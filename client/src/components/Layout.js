@@ -33,7 +33,7 @@ function Layout({ children }) {
     },
     {
       name: "Appointments",
-      path: "/appointments",
+      path: "/doctor/appointments",
       icon: "ri-file-copy-2-line",
     },
     {
