@@ -13,4 +13,4 @@ Step 2. Go to Client folder
 furry-vet-appointment-platform % cd client
 client % npm start
 
-
+Slides Link: https://docs.google.com/presentation/d/1p6BpZKSb_rw3KhcKTQtdgnQ8w0V20k11muk0XWF-q_Y/edit?usp=sharing
